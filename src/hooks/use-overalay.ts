@@ -3,12 +3,16 @@ import { useState, useEffect } from "react";
 import { TEmbedLink, TEmbedTitle } from "../types";
 
 /* types */
-type TInput = { embedLink: TEmbedLink, embedTitle: TEmbedTitle };
+type TInput = {
+  embedLink: TEmbedLink,
+  embedTitle: TEmbedTitle,
+  onCloseFn?: () => void,
+};
 
 /* hook */
 function useOveralay(props: TInput) {
   /* props - destruct */
-  const { embedLink, embedTitle } = props;
+  const { embedLink, embedTitle, onCloseFn } = props;
 
   /* local state */
   const [createOverlay, setCreateOverlay] = useState<boolean>(false);
@@ -19,6 +23,10 @@ function useOveralay(props: TInput) {
     setShowOverlay(() => false);
     setTimeout(() => {
       setCreateOverlay(() => false);
+      /* execute if present */
+      if (onCloseFn && typeof onCloseFn === "function") {
+        onCloseFn();
+      }
     }, 250);
   }
 

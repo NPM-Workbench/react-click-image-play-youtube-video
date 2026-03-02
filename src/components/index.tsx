@@ -10,7 +10,11 @@ import CloseBtn from "./close-button";
 import FrameComponent from "./frame-component";
 
 /* types */
-type FCProps = { embedLink: TEmbedLink, embedTitle: TEmbedTitle };
+type FCProps = {
+  embedLink: TEmbedLink,
+  embedTitle: TEmbedTitle,
+  onCloseFn?: () => void,
+};
 
 /* component */
 function UIComponent(props: FCProps): React.ReactElement  | null {
