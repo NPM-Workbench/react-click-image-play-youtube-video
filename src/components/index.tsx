@@ -4,7 +4,7 @@ import React from "react";
 /* app imports */
 import "../styles/style.scss";
 import { TEmbedLink, TEmbedTitle } from "../types/index.js";
-import useOveralay from "../hooks/use-overalay";
+import useOveralay from "../hooks/use-overlay";
 import MainDiv from "./main-div";
 import CloseBtn from "./close-button";
 import FrameComponent from "./frame-component";
