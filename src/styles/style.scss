@@ -28,6 +28,12 @@ $grey: rgba(0, 0, 0, 0.5);
   z-index: 1200;
 	background-color: rgba(0, 0, 0, 0.5);
   @include transition(all, 0.25s, linear);
+  &.hiddenTransform {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+  }
   .closeIcon {
     position: absolute;
     right: 15px;
@@ -42,12 +48,13 @@ $grey: rgba(0, 0, 0, 0.5);
     height: 30px;
     @include transition(transform, 0.25s, ease-in-out);
     display: flex;
-    img  {
+    svg  {
       width: 100%;
       height: auto;
     }
   }
 	iframe {
+    border: 0;
 		max-width: 853px;
 		max-height: 480px;
 		position: absolute;
@@ -62,13 +69,6 @@ $grey: rgba(0, 0, 0, 0.5);
     height: 60vh;
 	}
 }
-.videoPlayerOverlay.hiddenTransform {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(50px);
-  -webkit-transform: translateY(50px);
-}
-
 @media only screen and (min-width: 768px) {
   .videoPlayerOverlay {
     iframe {
@@ -80,7 +80,6 @@ $grey: rgba(0, 0, 0, 0.5);
   .videoPlayerOverlay {
     .closeIcon:hover {
       cursor: pointer;
-      background: $grey;
       transform: rotate(360deg);
       -webkit-transform: rotate(360deg);
     }

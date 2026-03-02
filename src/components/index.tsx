@@ -7,6 +7,7 @@ import { TEmbedLink, TEmbedTitle } from "../types/index.js";
 import useOveralay from "../hooks/use-overalay";
 import MainDiv from "./main-div";
 import CloseBtn from "./close-button";
+import FrameComponent from "./frame-component";
 
 /* types */
 type FCProps = { embedLink: TEmbedLink, embedTitle: TEmbedTitle };
@@ -23,6 +24,7 @@ function UIComponent(props: FCProps): React.ReactElement  | null {
     <>
       <MainDiv show={(createOverlay && showOverlay) ? true : false}>
         <CloseBtn handleOnClick={handleOnOverlayClose} />
+        <FrameComponent {...props} />
       </MainDiv>
     </>
   );
