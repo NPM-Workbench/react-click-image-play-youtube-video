@@ -1,12 +1,12 @@
 /* node modules */
-import { useState, useEffect } from "react";
-import { TEmbedLink, TEmbedTitle } from "../types";
+import { useState, useEffect } from 'react';
+import { TEmbedLink, TEmbedTitle } from '../types';
 
 /* types */
 type TInput = {
-  embedLink: TEmbedLink,
-  embedTitle: TEmbedTitle,
-  onCloseFn?: () => void,
+  embedLink: TEmbedLink;
+  embedTitle: TEmbedTitle;
+  onCloseFn?: () => void;
 };
 
 /* hook */
@@ -24,7 +24,7 @@ function useOveralay(props: TInput) {
     setTimeout(() => {
       setCreateOverlay(() => false);
       /* execute if present */
-      if (onCloseFn && typeof onCloseFn === "function") {
+      if (onCloseFn && typeof onCloseFn === 'function') {
         onCloseFn();
       }
     }, 250);
@@ -33,7 +33,7 @@ function useOveralay(props: TInput) {
   /* set: overlay status */
   useEffect(() => {
     setCreateOverlay(() => {
-      return (embedLink.length > 0 && embedTitle.length > 0) ? true : false;
+      return embedLink.length > 0 && embedTitle.length > 0 ? true : false;
     });
   }, [embedLink, embedTitle]);
 
