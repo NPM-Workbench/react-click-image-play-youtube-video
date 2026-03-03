@@ -137,3 +137,10 @@ All files             |     100 |      100 |     100 |     100 |
   use-overlay.ts      |     100 |      100 |     100 |     100 |
 ----------------------|---------|----------|---------|---------|-------------------
 ```
+
+### 📘 Contributing
+Contributions, suggestions, and improvements are welcome.<br/>
+Feel free to open issues or pull requests.
+
+### ❤️ Support
+Like this project? Support it with a github star, it would mean a lot to me! Cheers and Happy Coding.
