@@ -3,18 +3,17 @@
 ![downloads](https://img.shields.io/npm/dw/react-click-image-play-youtube-video)
 ![license](https://img.shields.io/npm/l/react-click-image-play-youtube-video)
 ![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/react-click-image-play-youtube-video)
-# React Click Image Play YouTube Video
+![Security Policy](https://img.shields.io/badge/security-policy-brightgreen)
 
+# React Click Image Play YouTube Video
 📺 A lightweight React component package that lets users click a preview image (or any other element like a button) and play a YouTube video inside an overlay. It provides a clean close interaction, simple props and is designed to be easy to drop into modern React projects.
 
 ### 📦 Installation
-
 ```console
 npm install react-click-image-play-youtube-video
 ```
 
 ### 📘 Features
-
 1. Click-to-open YouTube video overlay experience
 2. Smooth overlay show/hide behavior with close interaction
 3. Simple API with `embedLink`, `embedTitle`, and optional `onCloseFn`
@@ -23,15 +22,14 @@ npm install react-click-image-play-youtube-video
 6. Unit testing is implemented with Jest and React Testing Library to test core components and overlay behavior
 
 ### 🔤 Example Usage
-
 Note: Always pass `embedLink` in this format: `https://www.youtube.com/embed/<video-id>`.
 
 1. Basic Usage
 
 ```jsx
 /* node modules */
-import { useState } from 'react';
-import { ReactYouTubeOverlay } from 'react-click-image-play-youtube-video';
+import { useState } from "react";
+import { ReactYouTubeOverlay } from "react-click-image-play-youtube-video";
 
 /* component */
 function App() {
@@ -63,8 +61,8 @@ export default App;
 
 ```jsx
 /* node modules */
-import { useState } from 'react';
-import { ReactYouTubeOverlay } from 'react-click-image-play-youtube-video';
+import { useState } from "react";
+import { ReactYouTubeOverlay } from "react-click-image-play-youtube-video";
 
 /* component */
 function VideoPreview() {
@@ -76,7 +74,7 @@ function VideoPreview() {
       <img
         src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
         alt="Open video"
-        style={{ width: 320, cursor: 'pointer' }}
+        style={{ width: 320, cursor: "pointer" }}
         onClick={() => setOpenOverlay(true)}
       />
 
@@ -96,7 +94,6 @@ export default VideoPreview;
 ```
 
 ### 📗 Test Coverage
-
 ```
 PASS src/components/test/main-div.test.tsx
   MainDiv
@@ -141,9 +138,14 @@ All files             |     100 |      100 |     100 |     100 |
 ----------------------|---------|----------|---------|---------|-------------------
 ```
 
-### 📘 Contributing
-Contributions, suggestions, and improvements are welcome.<br/>
-Feel free to open issues or pull requests.
+### 📘 Contributions
+1. New Ideas/Contributions: Open Discussion(s) - https://github.com/NPM-Workbench/react-click-image-play-youtube-video/discussions
+2. Issues and Debugging: Open Issue(s) - https://github.com/NPM-Workbench/react-click-image-play-youtube-video/issues
+
+### 🔒 Security & Privacy
+1. This package is open source and designed as a lightweight client-side React component. It does not collect, store, sell, or share user data, and it does not include analytics, tracking, telemetry, cookies, local storage usage, backend services, or project-owned data collection systems.
+2. The component renders YouTube videos through an iframe using the `embedLink` provided by the consuming application. Any privacy behavior related to the embedded YouTube player is governed by YouTube/Google and the browser environment.
+3. For more details, including vulnerability reporting guidance and consumer security recommendations, please see the [Security Policy](https://github.com/NPM-Workbench/react-click-image-play-youtube-video/security/policy).
 
 ### ❤️ Support
 Like this project? Support it with a github star, it would mean a lot to me! Cheers and Happy Coding.
